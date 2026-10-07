@@ -24,7 +24,7 @@ async function startServer() {
 
   // Helper for resilient Gemini API calls with model fallback and exponential retry
   const generateContentWithRetry = async (ai: GoogleGenAI, contents: any) => {
-    const modelCandidates = ["gemini-3.6-flash", "gemini-3.1-flash-lite", "gemini-3.1-pro-preview"];
+    const modelCandidates = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-2.0-flash-exp"];
     let lastError: any = null;
 
     for (const modelCandidate of modelCandidates) {
